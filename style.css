@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Lusitana:400,700');
 @import url('https://fonts.googleapis.com/css?family=Tajawal');
-* {
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css?family=La+Belle+Aurore&display=swap");
+*,
+*::after,
+*::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 li {
   list-style: none;
@@ -10,6 +16,10 @@ li {
 /*body {*/
 /*  height: 100%;*/
 /*}*/
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
 body {
   /*background: linear-gradient(45deg, #e6e2df 80%, #c2c1bd 100%);*/
   background: #e6e2df;
@@ -205,3 +215,167 @@ section {
   height: 300px;
 }
 /* portfolio end */
+
+/* IDE contact form css */
+.editor {
+  position: relative;
+  min-height: 60vh;
+  width: 60vw;
+  margin: 75px auto;
+  border-radius: .5rem;
+  border: .1rem solid #000;
+  background-color: #2e2e2f;
+  box-shadow: 0 0.2rem 0.3rem black;
+  counter-reset: codeNum;
+
+  font-size: 3rem;
+  font-family: 'Source Code Pro', monospace;
+  line-height: 3rem;
+  font-weight: 100;
+  color: #81A1C1;
+  text-align: left;
+}
+.editor__tabs {
+  display: block;
+  position: relative;
+  height: 5%;
+  z-index: 1000;
+  background-color: #191919;
+}
+.editor__tabs h1 {
+  display: inline-block;
+  height: 100%;
+  margin: 0 0 0 3%;
+  padding: 0 1rem;
+  background-color: #2e2e2f;
+  border-radius: .3rem .3rem 0 0;
+  border-top: 1px solid #90907C;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  color: #90907C;
+  font-family: 'Source Code Pro', monospace;
+  vertical-align: baseline;
+}
+.editor__lines {
+  list-style-type: none;
+  height: 95%;
+  width: 97%;
+  margin-left: 3%;
+}
+.editor__lines li {
+  min-height: 3.5rem;
+}
+.editor__lines li:before {
+  content: counter(codeNum);
+  counter-increment: codeNum;
+  position: absolute;
+  left: 0;
+  width: 3%;
+  padding-right: .5rem;
+  color: #2e2e2f;
+  text-align: right;
+  font-size: 2.2rem;
+}
+.editor__lines:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #191919;
+  height: 100%;
+  width: 3%;
+}
+.editor__content {
+  margin-left: 1.3rem;
+  font-size: 1.9rem;
+  line-height: 1.9rem;
+  font-weight: 100;
+  font-family: 'Source Code Pro', monospace;
+}
+.editor__content--indent {
+  margin-left: 6rem;
+}
+.editor__content span {
+  font-size: 1.9rem;
+  line-height: 1.9rem;
+  font-weight: 100;
+  font-family: 'La Belle Aurore', cursive;
+}
+.editor__input-box {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: .5rem;
+  background-color: #282829;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-family: 'Source Code Pro', monospace;
+  padding: .2rem 1rem;
+  overflow: hidden;
+  color: #81A1C1;
+}
+.editor__input-box:hover {
+  border: 1px solid #90907C;
+  background-color: #191919;
+}
+.editor__input-box:active {
+  border: 1px solid #90907C;
+  background-color: #191919;
+}
+.editor__input-box:focus {
+  border: 1px solid #90907C;
+  outline: none;
+  caret-color: #FD971F;
+  background-color: #191919;
+}
+.editor__input-button {
+  padding: .5rem 1rem;
+  background-color: #5E81AC;
+  color: #ECEFF4;
+}
+.editor__input-button:focus {
+  background-color: #5E81AC;
+}
+.editor__input-button:hover {
+  background-color: #B48EAD;
+  cursor: pointer;
+}
+.editor__input-button:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  background-color: #A3BE8C;
+  color: #2E3440;
+}
+.editor__textarea {
+  margin-left: 10rem;
+  min-height: 125px;
+  min-width: 40%;
+  width: 85%;
+  max-width: 85%;
+  padding: 1rem;
+}
+
+.nord-comment {
+  color: #D8DEE9;
+}
+
+.nord-text {
+  color: #3B4252;
+}
+
+.nord-string {
+  color: #4C566A;
+}
+
+.nord-element {
+  color: #3B4252;
+}
+
+.nord-attribute {
+  color: #434C5E;
+}
+
+.editor__content .form-label {
+  color: #D8DEE9;
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* IDE contact form css end */

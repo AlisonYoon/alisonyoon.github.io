@@ -95,16 +95,85 @@
 <section>
     <h1>Contact</h1>
     <p>If you have any questions, please don't hesitate to reach me out.</p>
-    <form action="">
-        <label for="name">Name</label>
-        <input type="text" name="name">
-        <label for="email">Email</label>
-        <input type="email" name="email">
-        <label for="email-content">Message</label>
-        <textarea name="email-content" id="" cols="30" rows="10">
-        </textarea>
-        <a class="underlined underlined-gradient" href="">Send</a>
+
+    <!-- IDE contact form   -->
+    <form class="editor">
+		<span class="editor__tabs">
+			<h1>contact.html</h1>
+		</span>
+
+        <ul class="editor__lines">
+            <li>
+				<span class="editor__content nord-text">
+					&lt;<span class="nord-element">form</span> <span class="nord-attribute">class</span>=<span class="nord-string">"contact"</span>&gt;
+				</span>
+            </li>
+
+            <li>
+				<span class="editor__content editor__content--indent nord-text">
+					&lt;<span class="nord-element">label</span> <span class="nord-attribute">for</span>=<span class="nord-string">"name"</span>&gt;<span class="form-label">Full name:</span>&lt;/<span class="nord-element">label</span>&gt;
+				</span>
+            </li>
+
+            <li>
+				<span class="editor__content editor__content--indent nord-text">
+					&lt;<span class="nord-element">input</span> <span class="nord-attribute">type</span>=<span class="nord-string">"text"</span> <span class="nord-attribute">value</span>=<span class="nord-string">" <input type="text" placeholder="John Doe" class="editor__input-box editor__input-name"> "</span>/&gt;
+				</span>
+            </li>
+
+            <li>
+                <span class="editor__content">&nbsp;</span>
+            </li>
+
+            <li>
+				<span class="editor__content editor__content--indent nord-text">
+					&lt;<span class="nord-element">label</span> <span class="nord-attribute">for</span>=<span class="nord-string">"email"</span>&gt;<span class="form-label">Email Address:</span>&lt;/<span class="nord-element">label</span>&gt;
+				</span>
+            </li>
+
+            <li>
+				<span class="editor__content editor__content--indent nord-text">
+					&lt;<span class="nord-element">input</span> <span class="nord-attribute">type</span>=<span class="nord-string">"text"</span> <span class="nord-attribute">value</span>=<span class="nord-string">" <input type="text" placeholder="JDoe@example.com" class="editor__input-box editor__input-name"> "</span>/&gt;
+				</span>
+            </li>
+
+            <li>
+                <span class="editor__content">&nbsp;</span>
+            </li>
+
+            <li>
+                <span class="editor__content editor__content--indent nord-comment">&lt;!-- Your message here --&gt;</span>
+            </li>
+
+            <li>
+				<span class="editor__content editor__content--indent nord-text">
+					&lt;<span class="nord-element">textarea</span> <span class="nord-attribute">id</span>=<span class="nord-string">"message"</span>&gt;<br>
+				<textarea class="editor__input-box editor__textarea"></textarea>
+				</span>
+            </li>
+
+            <li>
+                <span class="editor__content editor__content--indent nord-text">&lt;/<span class="nord-element">textarea</span>&gt;</span>
+            </li>
+
+            <li>
+                <span class="editor__content">&nbsp;</span>
+            </li>
+
+            <li>
+				<span class="editor__content editor__content--indent nord-text">
+					&lt;<span class="nord-element">input</span> <span class="nord-attribute">type</span>=<span class="nord-string">"button"</span> <span class="nord-attribute">onclick</span>=<span class="nord-string">"<input class="editor__input-box editor__input-button" type="button" value="Submit">"</span>/&gt;
+				</span>
+            </li>
+
+            <li>
+				<span class="editor__content nord-text">
+					&lt;/<span class="nord-element">form</span>&gt;
+				</span>
+            </li>
+        </ul>
     </form>
+    <!-- IDE contact form end -->
 </section>
 <!-- contact section end -->
 </body>
