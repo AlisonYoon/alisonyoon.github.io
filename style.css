@@ -83,7 +83,7 @@ section {
 .underlined {
   color: #000;
   flex: 1;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 1.2;
   text-decoration: none;
   background-image: -webkit-linear-gradient(360deg, #4f7bd8 0%, #da8cee 50%, #ff9eb1 100%);
@@ -179,9 +179,19 @@ section {
 /* landing end */
 .about {
   text-align: left;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 500px 500px;
+}
+.about div {
+  padding: 1rem;
 }
 .about h1 {
   width: 90%;
+  font-size: 1.8rem;
+}
+.about p {
+  margin: 0.5rem;
 }
 
 /* about end */
