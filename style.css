@@ -191,7 +191,17 @@ section {
   font-size: 1.8rem;
 }
 .about p {
-  margin: 0.5rem;
+  margin: 0.5rem 0;
 }
 
 /* about end */
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.project-item {
+  width: 390px;
+  height: 300px;
+}
+/* portfolio end */
