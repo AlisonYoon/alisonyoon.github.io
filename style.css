@@ -73,7 +73,7 @@ nav ul li a {
 
 section {
   width: 80%;
-  margin: 0 auto;
+  margin: 20rem auto 0;
 }
 
 /* greetings area */
@@ -192,18 +192,16 @@ section {
 /* landing end */
 .about {
   text-align: left;
-  /*display: grid;*/
-  /*grid-template-columns: 50% 50%;*/
-  /*grid-template-rows: 500px 500px;*/
   display: flex;
   flex-wrap: wrap;
   -webkit-flex-flow: row wrap;
+  justify-content: center;
 }
 .about div {
   padding: 1rem;
   width: 400px;
   height: 500px;
-  margin: 20px 3rem;
+  margin: 5rem 3rem;
 }
 .about h1 {
   width: 90%;
@@ -347,18 +345,18 @@ section {
   background-color: #B48EAD;
   cursor: pointer;
 }
-.editor__input-button:active {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-  background-color: #A3BE8C;
-  color: #2E3440;
-}
+/*.editor__input-button:active {*/
+/*  cursor: -webkit-grabbing;*/
+/*  cursor: grabbing;*/
+/*  background-color: #A3BE8C;*/
+/*  color: #2E3440;*/
+/*}*/
 .editor__textarea {
   margin-left: 10rem;
   min-height: 125px;
   min-width: 40%;
-  width: 85%;
-  max-width: 85%;
+  width: 75%;
+  max-width: 75%;
   padding: 1rem;
 }
 
@@ -396,4 +394,13 @@ footer {
 }
 footer h3 {
   margin: 0 2rem;
+}
+footer h3 a.underlined {
+  color: #ECEFF4;
+}
+
+@media only screen and (max-width: 768px){
+  .editor {
+    display: none;
+  }
 }
