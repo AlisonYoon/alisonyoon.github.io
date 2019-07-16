@@ -192,12 +192,18 @@ section {
 /* landing end */
 .about {
   text-align: left;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 500px 500px;
+  /*display: grid;*/
+  /*grid-template-columns: 50% 50%;*/
+  /*grid-template-rows: 500px 500px;*/
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-flow: row wrap;
 }
 .about div {
   padding: 1rem;
+  width: 400px;
+  height: 500px;
+  margin: 20px 3rem;
 }
 .about h1 {
   width: 90%;
@@ -382,3 +388,12 @@ section {
 }
 
 /* IDE contact form css end */
+
+footer {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+footer h3 {
+  margin: 0 2rem;
+}
