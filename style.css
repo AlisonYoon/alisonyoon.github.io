@@ -212,7 +212,19 @@ section {
 .about p {
   margin: 0.5rem 0;
 }
-
+.about div code {
+  display: block;
+}
+.about div code.language-filter {
+  display: inline-block;
+  border: 1px solid #4C566A;
+  border-radius: .4rem;
+  background: #D8DEE9;
+  color: #434C5E;
+  font-size: 1.3rem;
+  padding: 0.2rem;
+  margin: 1.5rem 0 .5rem;
+}
 /* about end */
 .project-gallery {
   display: flex;
