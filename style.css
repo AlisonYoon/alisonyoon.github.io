@@ -29,7 +29,6 @@ body {
   font-family: 'Tajawal', 'Avenir', Helvetica, Arial, sans-serif;
   text-align: center;
   color: #D8DEE9;
-  border: 8px solid #8FBCBB;
   font-size: 1.8rem;
 }
 h1, h2, h3{
@@ -48,7 +47,7 @@ p {
 header {
   width: calc(100% - 16px);
   position: fixed;
-  z-index: 3;
+  z-index: 10000;
   /*display: flex;*/
   /*display: -webkit-box;*/
   /*display: -moz-box;*/
@@ -60,11 +59,9 @@ header {
 }
 nav {
   /*right: 0;*/
-  padding: 0;
+  overflow: hidden;
   max-height: 0;
   transition: max-height .2s ease-out;
-  overflow: hidden;
-  width: 100%;
   background: rgb(52, 59, 73);
   /*display: flex;*/
   /*display: -webkit-box;*/
@@ -94,6 +91,7 @@ header .menu-icon {
   padding: 28px 20px;
   position: relative;
   user-select: none;
+  background: rgb(52, 59, 73);
 }
 
 header .menu-icon .navicon {
@@ -493,6 +491,9 @@ footer h3 {
 }
 
 @media only screen and (min-width: 768px){
+  body {
+    border: 8px solid #8FBCBB;
+  }
   .editor {
     display: block;
   }
