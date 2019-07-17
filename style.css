@@ -65,6 +65,15 @@ nav a, .editor__input-button {
 .color-snow-dk-grey {
   color: #D8DEE9;
 }
+.color-polar-navy3 {
+  color: #3B4252;
+}
+.color-polar-navy2 {
+  color: #434C5E;
+}
+.color-frost-blue2 {
+  color: #81A1C1;
+}
 .bg-snow-dk-grey {
   background: #D8DEE9;
 }
@@ -95,6 +104,8 @@ header {
 nav {
   max-height: 0;
   transition: max-height .2s ease-out;
+  /* Cannot use global width-100 class because of Media Query. Can be fixed later with JS */
+  width: 100%;
 }
 nav a {
   margin: 0 1rem;
@@ -160,16 +171,16 @@ section {
 /* greetings area */
 .greetings {
   height: 100vh;
+  align-items: center;
+  /* clear <section>'s common padding, margin value */
   padding: 0;
   margin: 0;
-  align-items: center;
 }
 /* greetings area end */
 .underlined {
   color: #EBCB8B;
   flex: 1;
   font-size: 2rem;
-  line-height: 1.2;
   text-decoration: none;
   background-image: -webkit-linear-gradient(360deg, #5E81AC 0%, #88C0D0 50%, #A3BE8C 100%);
   background-position: 0 1.2em;
@@ -209,7 +220,6 @@ section {
   display: inline-block;
   border: 1px solid #4C566A;
   border-radius: .4rem;
-  color: #434C5E;
   font-size: 1.3rem;
   padding: 0.2rem;
   margin: 1.5rem 0 .5rem;
@@ -237,7 +247,6 @@ section {
   font-size: 3rem;
   line-height: 3rem;
   font-weight: 100;
-  color: #81A1C1;
 }
 .editor__tabs {
   height: 5%;
@@ -308,10 +317,9 @@ section {
   font-size: 1.6rem;
   line-height: 2.6rem;
   padding: .2rem 1rem;
-  color: #81A1C1;
 }
 .editor__input-box:hover {
-  border: 1px solid #90907C;
+  border: 1px solid #8FBCBB;
   background-color: #191919;
 }
 .editor__input-box:active {
@@ -319,9 +327,9 @@ section {
   background-color: #191919;
 }
 .editor__input-box:focus {
-  border: 1px solid #90907C;
+  border: 1px solid #5E81AC;
   outline: none;
-  caret-color: #FD971F;
+  caret-color: #5E81AC;
   background-color: #191919;
 }
 .editor__input-button {
@@ -343,17 +351,8 @@ section {
   max-width: 75%;
   padding: 1rem;
 }
-.nord-text {
-  color: #3B4252;
-}
 .nord-string {
   color: #4C566A;
-}
-.nord-element {
-  color: #3B4252;
-}
-.nord-attribute {
-  color: #434C5E;
 }
 /* IDE contact form css end */
 footer {
@@ -387,6 +386,10 @@ footer h3 {
     padding: 2rem 5rem;
     background: none;
     width: auto;
+  }
+  nav a {
+    /* cannot use global float-left class because it's in Media Query. Can be fixed later with JS */
+    float: left;
   }
   header .menu-icon {
     display: none;
