@@ -156,6 +156,7 @@ section {
   width: 80%;
   margin: 20rem auto 0;
   padding-top: 3rem;
+  clear: both;
 }
 
 /* greetings area */
@@ -280,12 +281,16 @@ section {
   flex-wrap: wrap;
   -webkit-flex-flow: row wrap;
   justify-content: center;
+/*  IE, Lower version Safari fall back */
+  overflow: auto;
 }
 .about div {
   padding: 1rem;
   width: 100%;
   height: 500px;
   margin: 30rem 3rem;
+  /*  IE, Lower version Safari fall back */
+  float: left;
 }
 .about div:first-child {
   margin-top: 5rem;
@@ -315,11 +320,13 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  overflow: auto;
 }
 .project-item {
   width: 100%;
   height: 300px;
   overflow: hidden;
+  float: left;
 }
 /* portfolio end */
 
