@@ -320,12 +320,14 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  /*  IE, Lower version Safari fall back */
   overflow: auto;
 }
 .project-item {
   width: 100%;
   height: 300px;
   overflow: hidden;
+  /*  IE, Lower version Safari fall back */
   float: left;
 }
 /* portfolio end */
