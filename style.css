@@ -59,7 +59,7 @@ nav a, .editor__input-button {
 .overflow-auto {
   overflow: auto;
 }
-.body-background {
+.default-background {
   background: rgb(52, 59, 73);
 }
 .color-snow-dk-grey {
@@ -112,6 +112,7 @@ nav a {
   text-decoration: none;
   font-weight: 600;
   padding: 20px 20px;
+  display: block;
 }
 /* menu icon */
 header .menu-icon {
@@ -216,6 +217,9 @@ section {
 .about p {
   margin: 0.5rem 0;
 }
+.about div code {
+  display: block;
+}
 .about div code.language-filter {
   display: inline-block;
   border: 1px solid #4C566A;
@@ -223,6 +227,8 @@ section {
   font-size: 1.3rem;
   padding: 0.2rem;
   margin: 1.5rem 0 .5rem;
+  color: #434C5E;
+  background: #D8DEE9;
 }
 /* about end */
 .project-gallery {
