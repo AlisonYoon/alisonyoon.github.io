@@ -5,9 +5,19 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Alison's previous work</title>
 </head>
 <body>
+<div class="landing-grid-container">
+    <div class="wrapper">
+        <h2 class="landing" contenteditable data-heading="윤수정">윤수정</h2>
+    </div>
+    <div class="wrapper">
+        <h2 class="landing" contenteditable data-heading="Alison Yoon">
+            Alison Yoon
+        </h2>
+    </div>
+</div>
 <div class="grid-container">
     <div class="grid-item"></div>
     <div class="grid-item">
@@ -91,12 +101,17 @@
 <style>
     @import url('https://fonts.googleapis.com/css?family=Lusitana:400,700');
     @import url('https://fonts.googleapis.com/css?family=Tajawal');
+    html,
+    body {
+        height: 100%;
+    }
     body {
         font-family: 'Tajawal', 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
+        background: linear-gradient(45deg, #e6e2df 80%, #c2c1bd 100%);
     }
     h1 {
         font-family: 'Lusitana', serif;
@@ -106,17 +121,14 @@
     h3 {
         margin: 40px 0 0;
     }
-
     ul {
         list-style-type: none;
         padding: 0;
     }
-
     li {
         display: inline-block;
         margin: 0 10px;
     }
-
     a {
         border-bottom: 2px solid;
         color: #da8cee;
@@ -127,7 +139,6 @@
     a:hover {
         border-bottom: 2px solid #4f7bd8;
     }
-
     .grid-container {
         display: grid;
         grid-template-columns: 0.5fr 75vw 2fr;
@@ -140,18 +151,6 @@
         font-size: 18px;
         margin: 3em 0;
     }
-
-    html,
-    body {
-        height: 100%;
-    }
-
-    body {
-        background: linear-gradient(45deg, #e6e2df 80%, #c2c1bd 100%);
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-
     .landing-grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
