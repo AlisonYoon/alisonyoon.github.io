@@ -1,0 +1,241 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  /* prevent horizontal scroll in mobile devices */
+  width: 100%;
+  max-width: 100%;
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Tajawal', 'Avenir', Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-size: 1.8rem;
+
+    h1, h2, h3 {
+      font-family: 'Lusitana', serif;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 3.8rem;
+      color: #8FBCBB;
+    }
+
+    p {
+      line-height: 150%;
+      margin-bottom: 2rem;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    /* Shared values - such as color, position, float, overflow, etc */
+    nav a, .editor__input-button {
+      color: #ECEFF4;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .float-left {
+      float: left;
+    }
+
+    .float-right {
+      float: right;
+    }
+
+    .text-left {
+      text-align: left;
+    }
+
+    .overflow-hidden {
+      overflow: hidden;
+    }
+
+    .overflow-auto {
+      overflow: auto;
+    }
+
+    .default-background {
+      background: rgb(52, 59, 73);
+    }
+
+    .color-snow-dk-grey {
+      color: #D8DEE9;
+    }
+
+    .color-polar-navy3 {
+      color: #3B4252;
+    }
+
+    .color-polar-navy2 {
+      color: #434C5E;
+    }
+
+    .color-frost-blue2 {
+      color: #81A1C1;
+    }
+
+    .bg-snow-dk-grey {
+      background: #D8DEE9;
+    }
+
+    .width-100 {
+      width: 100%;
+    }
+
+    .flexbox {
+      display: flex;
+    }
+
+    .display-block {
+      display: block;
+    }
+
+    .flexwrap-wrap {
+      flex-wrap: wrap;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .font-sourcecodepro {
+      font-family: 'Source Code Pro', monospace;
+    }
+
+    /* nav area */
+    header {
+      width: calc(100% - 16px);
+      position: fixed;
+      z-index: 10000;
+
+      nav {
+        max-height: 0;
+        transition: max-height .2s ease-out;
+        /* Cannot use global width-100 class because of Media Query. Can be fixed later with JS */
+        width: 100%;
+
+        a {
+          margin: 0 1rem;
+          text-decoration: none;
+          font-weight: 600;
+          padding: 20px 20px;
+          display: block;
+        }
+      }
+
+      /* menu icon */
+      .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        padding: 28px 20px;
+        user-select: none;
+
+        .navicon {
+          height: 2px;
+          transition: background .2s ease-out;
+          width: 18px;
+
+          &:before, &:after {
+            background: #D8DEE9;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+          }
+
+          &:before {
+            top: 5px;
+          }
+
+          &:after {
+            top: -5px;
+          }
+        }
+      }
+
+      /* menu btn */
+      .menu-btn {
+        display: none;
+
+        &:checked ~ nav {
+          max-height: 240px;
+        }
+
+        &:checked ~ .menu-icon {
+
+          .navicon {
+
+            &:before, &:after {
+              top: 0;
+            }
+
+            &:before {
+              transform: rotate(-45deg);
+            }
+
+            &:after {
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+
+    /* header area end*/
+
+    section {
+      width: 80%;
+      margin: 20rem auto 0;
+      padding-top: 3rem;
+      clear: both;
+
+      /* greetings area */
+      &.greetings {
+        height: 100vh;
+        align-items: center;
+        /* clear <section>'s common padding, margin value */
+        padding: 0;
+        margin: 0;
+      }
+
+      /* greetings area end */
+
+      .underlined {
+        color: #EBCB8B;
+        flex: 1;
+        font-size: 2rem;
+        text-decoration: none;
+        background-image: -webkit-linear-gradient(360deg, #5E81AC 0%, #88C0D0 50%, #A3BE8C 100%);
+        background-position: 0 1.2em;
+        background-size: 0 100%;
+        background-repeat: no-repeat;
+        transition: background .5s;
+
+        &:hover {
+          background-size: 100% 100%;
+        }
+      }
+
+      .underlined-gradient {
+        background-position: 0 -0.1em;
+        background-image: -webkit-linear-gradient(360deg, #5E81AC 0%, #88C0D0 50%, #A3BE8C 100%);
+      }
+
+    }
+  }
+}
