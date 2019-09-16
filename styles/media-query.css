@@ -1,0 +1,40 @@
+/* Media Query */
+@media only screen and (min-width: 414px) {
+    .about div {
+        margin: 10rem 3rem;
+    }
+}
+@media only screen and (min-width: 768px){
+    body {
+        border: 8px solid #8FBCBB;
+    }
+    .editor {
+        display: block;
+    }
+    header {
+        background: none;
+    }
+    header a {
+        padding: 20px 30px;
+    }
+    header nav {
+        max-height: none;
+        padding: 2rem 5rem;
+        background: none;
+        width: auto;
+    }
+    nav a {
+        /* cannot use global float-left class because it's in Media Query. Can be fixed later with JS */
+        float: left;
+    }
+    header .menu-icon {
+        display: none;
+    }
+    .about div {
+        margin: 5rem 3rem;
+        width: 400px;
+    }
+    .project-item {
+        width: 390px;
+    }
+}

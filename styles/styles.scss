@@ -236,6 +236,60 @@ html {
         background-image: -webkit-linear-gradient(360deg, #5E81AC 0%, #88C0D0 50%, #A3BE8C 100%);
       }
 
+      &.about {
+        -webkit-flex-flow: row wrap;
+        /*  IE, Lower version Safari fall back {overflow: auto} added above in the Shared values*/
+
+        div {
+          padding: 1rem;
+          height: 500px;
+          margin: 30rem 3rem;
+          /*  IE, Lower version Safari fall back {float:left} added above in the Shared values */
+
+          &:first-child {
+            margin-top: 5rem;
+          }
+
+          code {
+            display: block;
+
+            &.language-filter {
+              display: inline-block;
+              border: 1px solid #4C566A;
+              border-radius: .4rem;
+              font-size: 1.3rem;
+              padding: 0.2rem;
+              margin: 1.5rem 0 .5rem;
+              color: #434C5E;
+              background: #D8DEE9;
+            }
+          }
+        }
+
+        h1 {
+          width: 90%;
+          font-size: 2.5rem;
+        }
+
+        p {
+          margin: 0.5rem 0;
+        }
+      }
+      /* about end */
+
+      &.portfolio {
+
+        .project-gallery {
+          /*  IE, Lower version Safari fall back {overflow: auto} added above in the Shared values */
+
+          .project-item {
+            height: 300px;
+            /*  IE, Lower version Safari fall back {float:left} added above in the Shared values */
+          }
+        }
+      }
+      /* portfolio end */
+
     }
   }
 }
