@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Lusitana:400,700');
+@import url('https://fonts.googleapis.com/css?family=Tajawal');
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css?family=La+Belle+Aurore&display=swap");
+
 *,
 *::after,
 *::before {
@@ -11,285 +16,327 @@ html {
   /* prevent horizontal scroll in mobile devices */
   width: 100%;
   max-width: 100%;
+}
 
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: 'Tajawal', 'Avenir', Helvetica, Arial, sans-serif;
-    text-align: center;
-    font-size: 1.8rem;
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Tajawal', 'Avenir', Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 1.8rem;
 
-    h1, h2, h3 {
-      font-family: 'Lusitana', serif;
+  @media only screen and (min-width: 768px) {
+    border: 8px solid #8FBCBB;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Lusitana', serif;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 3.8rem;
+    color: #8FBCBB;
+  }
+
+  p {
+    line-height: 150%;
+    margin-bottom: 2rem;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  /* nav area */
+  header {
+    width: calc(100% - 16px);
+    position: fixed;
+    z-index: 10000;
+
+    @media only screen and (min-width: 768px) {
+      background: none;
     }
 
-    h1 {
-      font-weight: 700;
-      font-size: 3.8rem;
-      color: #8FBCBB;
-    }
-
-    p {
-      line-height: 150%;
-      margin-bottom: 2rem;
-    }
-
-    li {
-      list-style: none;
-    }
-
-    /* Shared values - such as color, position, float, overflow, etc */
-    nav a, .editor__input-button {
-      color: #ECEFF4;
-    }
-
-    .relative {
-      position: relative;
-    }
-
-    .float-left {
-      float: left;
-    }
-
-    .float-right {
-      float: right;
-    }
-
-    .text-left {
-      text-align: left;
-    }
-
-    .overflow-hidden {
-      overflow: hidden;
-    }
-
-    .overflow-auto {
-      overflow: auto;
-    }
-
-    .default-background {
-      background: rgb(52, 59, 73);
-    }
-
-    .color-snow-dk-grey {
-      color: #D8DEE9;
-    }
-
-    .color-polar-navy3 {
-      color: #3B4252;
-    }
-
-    .color-polar-navy2 {
-      color: #434C5E;
-    }
-
-    .color-frost-blue2 {
-      color: #81A1C1;
-    }
-
-    .bg-snow-dk-grey {
-      background: #D8DEE9;
-    }
-
-    .width-100 {
+    nav {
+      max-height: 0;
+      transition: max-height .2s ease-out;
+      /* Cannot use global width-100 class because of Media Query. Can be fixed later with JS */
       width: 100%;
-    }
 
-    .flexbox {
-      display: flex;
-    }
-
-    .display-block {
-      display: block;
-    }
-
-    .flexwrap-wrap {
-      flex-wrap: wrap;
-    }
-
-    .justify-center {
-      justify-content: center;
-    }
-
-    .font-sourcecodepro {
-      font-family: 'Source Code Pro', monospace;
-    }
-
-    /* nav area */
-    header {
-      width: calc(100% - 16px);
-      position: fixed;
-      z-index: 10000;
-
-      nav {
-        max-height: 0;
-        transition: max-height .2s ease-out;
-        /* Cannot use global width-100 class because of Media Query. Can be fixed later with JS */
-        width: 100%;
-
-        a {
-          margin: 0 1rem;
-          text-decoration: none;
-          font-weight: 600;
-          padding: 20px 20px;
-          display: block;
-        }
+      @media only screen and (min-width: 768px) {
+          max-height: none;
+          padding: 2rem 5rem;
+          background: none;
+          width: auto;
       }
 
-      /* menu icon */
-      .menu-icon {
-        cursor: pointer;
-        display: inline-block;
-        padding: 28px 20px;
-        user-select: none;
+      a {
+        margin: 0 1rem;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 20px 20px;
+        display: block;
+
+        @media only screen and (min-width: 768px) {
+          padding: 20px 30px;
+          /* cannot use global float-left class because it's in Media Query. Can be fixed later with JS */
+          float: left;
+        }
+      }
+    }
+
+    /* menu icon */
+    .menu-icon {
+      cursor: pointer;
+      display: inline-block;
+      padding: 28px 20px;
+      user-select: none;
+
+      @media only screen and (min-width: 768px) {
+          display: none;
+      }
+
+      .navicon {
+        height: 2px;
+        transition: background .2s ease-out;
+        width: 18px;
+
+        &:before, &:after {
+          background: #D8DEE9;
+          content: '';
+          display: block;
+          height: 100%;
+          position: absolute;
+          transition: all .2s ease-out;
+          width: 100%;
+        }
+
+        &:before {
+          top: 5px;
+        }
+
+        &:after {
+          top: -5px;
+        }
+      }
+    }
+
+    /* menu btn */
+    .menu-btn {
+      display: none;
+
+      &:checked ~ nav {
+        max-height: 240px;
+      }
+
+      &:checked ~ .menu-icon {
 
         .navicon {
-          height: 2px;
-          transition: background .2s ease-out;
-          width: 18px;
 
           &:before, &:after {
-            background: #D8DEE9;
-            content: '';
-            display: block;
-            height: 100%;
-            position: absolute;
-            transition: all .2s ease-out;
-            width: 100%;
+            top: 0;
           }
 
           &:before {
-            top: 5px;
+            transform: rotate(-45deg);
           }
 
           &:after {
-            top: -5px;
+            transform: rotate(45deg);
           }
         }
       }
-
-      /* menu btn */
-      .menu-btn {
-        display: none;
-
-        &:checked ~ nav {
-          max-height: 240px;
-        }
-
-        &:checked ~ .menu-icon {
-
-          .navicon {
-
-            &:before, &:after {
-              top: 0;
-            }
-
-            &:before {
-              transform: rotate(-45deg);
-            }
-
-            &:after {
-              transform: rotate(45deg);
-            }
-          }
-        }
-      }
-    }
-
-    /* header area end*/
-
-    section {
-      width: 80%;
-      margin: 20rem auto 0;
-      padding-top: 3rem;
-      clear: both;
-
-      /* greetings area */
-      &.greetings {
-        height: 100vh;
-        align-items: center;
-        /* clear <section>'s common padding, margin value */
-        padding: 0;
-        margin: 0;
-      }
-
-      /* greetings area end */
-
-      .underlined {
-        color: #EBCB8B;
-        flex: 1;
-        font-size: 2rem;
-        text-decoration: none;
-        background-image: -webkit-linear-gradient(360deg, #5E81AC 0%, #88C0D0 50%, #A3BE8C 100%);
-        background-position: 0 1.2em;
-        background-size: 0 100%;
-        background-repeat: no-repeat;
-        transition: background .5s;
-
-        &:hover {
-          background-size: 100% 100%;
-        }
-      }
-
-      .underlined-gradient {
-        background-position: 0 -0.1em;
-        background-image: -webkit-linear-gradient(360deg, #5E81AC 0%, #88C0D0 50%, #A3BE8C 100%);
-      }
-
-      &.about {
-        -webkit-flex-flow: row wrap;
-        /*  IE, Lower version Safari fall back {overflow: auto} added above in the Shared values*/
-
-        div {
-          padding: 1rem;
-          height: 500px;
-          margin: 30rem 3rem;
-          /*  IE, Lower version Safari fall back {float:left} added above in the Shared values */
-
-          &:first-child {
-            margin-top: 5rem;
-          }
-
-          code {
-            display: block;
-
-            &.language-filter {
-              display: inline-block;
-              border: 1px solid #4C566A;
-              border-radius: .4rem;
-              font-size: 1.3rem;
-              padding: 0.2rem;
-              margin: 1.5rem 0 .5rem;
-              color: #434C5E;
-              background: #D8DEE9;
-            }
-          }
-        }
-
-        h1 {
-          width: 90%;
-          font-size: 2.5rem;
-        }
-
-        p {
-          margin: 0.5rem 0;
-        }
-      }
-      /* about end */
-
-      &.portfolio {
-
-        .project-gallery {
-          /*  IE, Lower version Safari fall back {overflow: auto} added above in the Shared values */
-
-          .project-item {
-            height: 300px;
-            /*  IE, Lower version Safari fall back {float:left} added above in the Shared values */
-          }
-        }
-      }
-      /* portfolio end */
-
     }
   }
+
+  /* header area end*/
+
+  section {
+    width: 80%;
+    margin: 20rem auto 0;
+    padding-top: 3rem;
+    clear: both;
+
+    /* greetings area */
+    &.greetings {
+      height: 100vh;
+      align-items: center;
+      /* clear <section>'s common padding, margin value */
+      padding: 0;
+      margin: 0;
+    }
+
+    /* greetings area end */
+
+    .underlined {
+      color: #EBCB8B;
+      flex: 1;
+      font-size: 2rem;
+      text-decoration: none;
+      background-image: -webkit-linear-gradient(360deg, #5E81AC 0%, #88C0D0 50%, #A3BE8C 100%);
+      background-position: 0 1.2em;
+      background-size: 0 100%;
+      background-repeat: no-repeat;
+      transition: background .5s;
+
+      &:hover {
+        background-size: 100% 100%;
+      }
+    }
+
+    .underlined-gradient {
+      background-position: 0 -0.1em;
+      background-image: -webkit-linear-gradient(360deg, #5E81AC 0%, #88C0D0 50%, #A3BE8C 100%);
+    }
+
+    &.about {
+      -webkit-flex-flow: row wrap;
+      /*  IE, Lower version Safari fall back {overflow: auto} added above in the Shared values*/
+
+      div {
+        padding: 1rem;
+        height: 500px;
+        margin: 30rem 3rem;
+        /*  IE, Lower version Safari fall back {float:left} added above in the Shared values */
+        overflow: hidden;
+
+        &:first-child {
+          margin-top: 5rem;
+        }
+
+        code {
+          display: block;
+
+          &.language-filter {
+            display: inline-block;
+            border: 1px solid #4C566A;
+            border-radius: .4rem;
+            font-size: 1.3rem;
+            padding: 0.2rem;
+            margin: 1.5rem 0 .5rem;
+            color: #434C5E;
+            background: #D8DEE9;
+          }
+        }
+
+        @media only screen and (min-width: 768px) {
+          margin: 5rem 3rem;
+          width: 400px;
+        }
+
+        @media only screen and (min-width: 414px) {
+          margin: 10rem 3rem;
+        }
+      }
+
+      h1 {
+        width: 90%;
+        font-size: 2.5rem;
+      }
+
+      p {
+        margin: 0.5rem 0;
+      }
+    }
+
+    /* about end */
+
+    &.portfolio {
+
+      .project-gallery {
+        /*  IE, Lower version Safari fall back {overflow: auto} added above in the Shared values */
+
+        .project-item {
+          height: 300px;
+          /*  IE, Lower version Safari fall back {float:left} added above in the Shared values */
+
+          @media only screen and (min-width: 768px) {
+            width: 390px;
+          }
+        }
+      }
+    }
+
+    /* portfolio end */
+
+  }
+}
+
+
+/* Shared values - such as color, position, float, overflow, etc */
+nav a, .editor__input-button {
+  color: #ECEFF4;
+}
+
+.relative {
+  position: relative;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.default-background {
+  background: rgb(52, 59, 73);
+}
+
+.color-snow-dk-grey {
+  color: #D8DEE9;
+}
+
+.color-polar-navy3 {
+  color: #3B4252;
+}
+
+.color-polar-navy2 {
+  color: #434C5E;
+}
+
+.color-frost-blue2 {
+  color: #81A1C1;
+}
+
+.bg-snow-dk-grey {
+  background: #D8DEE9;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.flexbox {
+  display: flex;
+}
+
+.display-block {
+  display: block;
+}
+
+.flexwrap-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.font-sourcecodepro {
+  font-family: 'Source Code Pro', monospace;
 }

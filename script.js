@@ -11,7 +11,7 @@ let getApiResponse = (apiUrl) => {
         .then(
             function(obj) {
                 for(let i = 0; i < 6; i++) {
-                    printHere.innerHTML += "<a href='' target='_blank' class='repo_link'>" + obj[i]["name"] + "</a><br/>"
+                    printHere.innerHTML += "<a href='' target='_blank' class='repo_link underlined underlined-gradient'>" + obj[i]["name"] + "</a><br/>"
                     let repoLinkHref = document.querySelectorAll('.repo_link')
                     repoLinkHref[i].href = obj[i]["html_url"]
                 }
