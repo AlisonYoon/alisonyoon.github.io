@@ -300,7 +300,10 @@ body section.portfolio .project-gallery .modal-header {
   justify-content: space-between;
 }
 body section.portfolio .project-gallery .modal-footer {
-  position: absolute;
+  position: sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
   bottom: 0;
   width: 100%;
 }
