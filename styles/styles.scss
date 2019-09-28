@@ -250,6 +250,21 @@ body {
         .project-item {
           height: 300px;
           /*  IE, Lower version Safari fall back {float:left} added above in the Shared values */
+          background-size: cover;
+          background-repeat: no-repeat;
+          cursor: pointer;
+
+          &:nth-child(1) {
+            background-image: url(../images/collectorsapp.png);
+          }
+
+          &:nth-child(2) {
+            background-image: url(../images/dogmaze.png);
+          }
+
+          &:nth-child(3) {
+            background-image: url(../images/catapi.png);
+          }
 
           @media only screen and (min-width: 768px) {
             width: 390px;

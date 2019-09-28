@@ -218,6 +218,18 @@ body section.portfolio .project-gallery {
 body section.portfolio .project-gallery .project-item {
   height: 300px;
   /*  IE, Lower version Safari fall back {float:left} added above in the Shared values */
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+body section.portfolio .project-gallery .project-item:nth-child(1) {
+  background-image: url(../images/collectorsapp.png);
+}
+body section.portfolio .project-gallery .project-item:nth-child(2) {
+  background-image: url(../images/dogmaze.png);
+}
+body section.portfolio .project-gallery .project-item:nth-child(3) {
+  background-image: url(../images/catapi.png);
 }
 @media only screen and (min-width: 768px) {
   body section.portfolio .project-gallery .project-item {
