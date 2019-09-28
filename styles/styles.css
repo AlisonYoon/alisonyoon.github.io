@@ -225,8 +225,6 @@ body section.portfolio .project-gallery {
   /*  IE, Lower version Safari fall back {overflow: auto} added above in the Shared values */
   /* MODAL
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  /* FOOTER
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 }
 body section.portfolio .project-gallery .project-item {
   height: 300px;
@@ -273,6 +271,7 @@ body section.portfolio .project-gallery .modal {
   visibility: hidden;
   opacity: 0;
   transition: all 0.35s ease-in;
+  color: var(--black);
 }
 body section.portfolio .project-gallery .modal.is-visible {
   visibility: visible;
@@ -300,19 +299,19 @@ body section.portfolio .project-gallery .modal-header {
   align-items: center;
   justify-content: space-between;
 }
+body section.portfolio .project-gallery .modal-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 body section.portfolio .project-gallery .modal-header .close-modal {
   font-size: 1.5rem;
 }
 body section.portfolio .project-gallery .modal p + p {
   margin-top: 1rem;
 }
-body section.portfolio .project-gallery .page-footer {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-}
-body section.portfolio .project-gallery .page-footer span {
-  color: #e31b23;
+body section.portfolio .project-gallery .modal-content img {
+  width: 100%;
 }
 
 footer {
