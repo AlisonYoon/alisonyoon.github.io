@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lusitana:400,700");
 @import url("https://fonts.googleapis.com/css?family=Tajawal");
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap");
@@ -8,6 +9,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+:root {
+  --lightgray: #efefef;
+  --blue: steelblue;
+  --white: #fff;
+  --black: rgba(0, 0, 0, 0.8);
+  --bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
 }
 
 html {
@@ -214,6 +223,10 @@ body section.about p {
 }
 body section.portfolio .project-gallery {
   /*  IE, Lower version Safari fall back {overflow: auto} added above in the Shared values */
+  /* MODAL
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  /* FOOTER
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 }
 body section.portfolio .project-gallery .project-item {
   height: 300px;
@@ -231,10 +244,79 @@ body section.portfolio .project-gallery .project-item:nth-child(2) {
 body section.portfolio .project-gallery .project-item:nth-child(3) {
   background-image: url(../images/catapi.png);
 }
+body section.portfolio .project-gallery .project-item:nth-child(4) {
+  background-image: url("https://placeimg.com/390/300/arch");
+}
+body section.portfolio .project-gallery .project-item:nth-child(5) {
+  background-image: url("https://placeimg.com/390/300/arch");
+}
+body section.portfolio .project-gallery .project-item:nth-child(6) {
+  background-image: url("https://placeimg.com/390/300/arch");
+}
 @media only screen and (min-width: 768px) {
   body section.portfolio .project-gallery .project-item {
     width: 390px;
   }
+}
+body section.portfolio .project-gallery .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--black);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in;
+}
+body section.portfolio .project-gallery .modal.is-visible {
+  visibility: visible;
+  opacity: 1;
+  z-index: 100000;
+}
+body section.portfolio .project-gallery .modal-dialog {
+  position: relative;
+  max-width: 800px;
+  max-height: 80vh;
+  border-radius: 5px;
+  background: var(--white);
+  overflow: auto;
+  cursor: default;
+}
+body section.portfolio .project-gallery .modal-dialog > * {
+  padding: 1rem;
+}
+body section.portfolio .project-gallery .modal-header,
+body section.portfolio .project-gallery .modal-footer {
+  background: var(--lightgray);
+}
+body section.portfolio .project-gallery .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body section.portfolio .project-gallery .modal-header .close-modal {
+  font-size: 1.5rem;
+}
+body section.portfolio .project-gallery .modal p + p {
+  margin-top: 1rem;
+}
+body section.portfolio .project-gallery .page-footer {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+body section.portfolio .project-gallery .page-footer span {
+  color: #e31b23;
+}
+
+footer {
+  justify-content: space-evenly;
 }
 
 /* Shared values - such as color, position, float, overflow, etc */

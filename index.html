@@ -7,10 +7,11 @@
     <link rel="stylesheet" type="text/css" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <script defer src="script.js"></script>
+    <script defer src="modal.js"></script>
 </head>
 <body class="default-background color-snow-dk-grey">
 <header>
-    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <input class="menu-btn" type="checkbox" id="menu-btn"/>
     <label class="menu-icon relative float-right default-background" for="menu-btn">
         <span class="navicon relative bg-snow-dk-grey display-block"></span>
     </label>
@@ -75,7 +76,8 @@
     <div>
         <h1>Playlist</h1>
         <p>When coding, she appreciates good tunes.</p>
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX8Uebhn9wzrS" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX8Uebhn9wzrS" width="300" height="380"
+                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
 
 </section>
@@ -83,107 +85,144 @@
 <section id="portfolio" class="portfolio">
     <h1>Projects</h1>
     <div class="project-gallery overflow-auto flexbox flexwrap-wrap justify-center">
-        <div class="project-item float-left overflow-hidden width-100">
-<!--            <img src="images/collectorsapp.png" alt="">-->
+        <div class="project-item float-left overflow-hidden width-100 open-modal" data-open="modal1"></div>
+        <div class="project-item float-left overflow-hidden width-100 open-modal" data-open="modal2"></div>
+        <div class="project-item float-left overflow-hidden width-100 open-modal" data-open="modal3"></div>
+        <div class="project-item float-left overflow-hidden width-100 open-modal"></div>
+        <div class="project-item float-left overflow-hidden width-100 open-modal"></div>
+        <div class="project-item float-left overflow-hidden width-100 open-modal"></div>
+
+<!--       Modals -  Project item contents        -->
+        <div class="modal" id="modal1">
+            <div class="modal-dialog">
+                <div class="modal-header">
+                    The header of the first modal
+                    <button class="close-modal" aria-label="close modal" data-close>
+                        ✕
+                    </button>
+                </div>
+                <section class="modal-content">
+                    <p><strong>Press ✕, ESC, or click outside of the modal to close it</strong></p>
+                </section>
+                <footer class="modal-footer">
+                    The footer of the first modal
+                </footer>
+            </div>
         </div>
-        <div class="project-item float-left overflow-hidden width-100">
-<!--            <img src="images/dogmaze.png" alt="">-->
+
+        <div class="modal" id="modal2">
+            <div class="modal-dialog">
+                <div class="modal-header">
+                    The header of the second modal
+                    <button class="close-modal" aria-label="close modal" data-close>
+                        ✕
+                    </button>
+                </div>
+                <section class="modal-content">
+                    <p><strong>Press ✕, ESC, or click outside of the modal to close it</strong></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione! Nesciunt, nemo dolorum recusandae ad ex nam similique dolorem ab perspiciatis qui. Facere, dignissimos. Nemo, ea.</p>
+                    <p>Nullam vitae enim vel diam elementum tincidunt a eget metus. Curabitur finibus vestibulum rutrum. Vestibulum semper tellus vitae tortor condimentum porta. Sed id ex arcu. Vestibulum eleifend tortor non purus porta dapibus</p>
+                </section>
+                <footer class="modal-footer">
+                    The footer of the second modal
+                </footer>
+            </div>
         </div>
-        <div class="project-item float-left overflow-hidden width-100">
-<!--            <img src="images/catapi.png" alt="">-->
-        </div>
-        <div class="project-item float-left overflow-hidden width-100"><img src="https://placeimg.com/390/300/arch" alt=""></div>
-        <div class="project-item float-left overflow-hidden width-100"><img src="https://placeimg.com/390/300/arch" alt=""></div>
-        <div class="project-item float-left overflow-hidden width-100"><img src="https://placeimg.com/390/300/arch" alt=""></div>
+<!--  Modal content end      -->
     </div>
+<!--    project-gallery end     -->
+
 </section>
 <!-- portfolio section end -->
 <section id="contact">
     <h1>Contact</h1>
     <p>If you have any questions, please don't hesitate to reach me out.</p>
-    <footer class="flexbox justify-center">
-        <h3><a class="underlined underlined-gradient" href="https://github.com/AlisonYoon" target="_blank">Github</a></h3>
-        <h3><a class="underlined underlined-gradient"  href="https://www.linkedin.com/in/alison-yoon/" target="_blank">LinkedIn</a></h3>
-        <h3><a class="underlined underlined-gradient"  href="https://twitter.com/aliyooncreative" target="_blank">Twitter</a></h3>
+    <footer class="flexbox">
+        <h3><a class="underlined underlined-gradient" href="https://github.com/AlisonYoon" target="_blank">Github</a>
+        </h3>
+        <h3><a class="underlined underlined-gradient" href="https://www.linkedin.com/in/alison-yoon/" target="_blank">LinkedIn</a>
+        </h3>
+        <h3><a class="underlined underlined-gradient" href="https://twitter.com/aliyooncreative"
+               target="_blank">Twitter</a></h3>
     </footer>
 
     <!-- IDE contact form   -->
-<!--    <form class="editor relative text-left font-sourcecodepro color-frost-blue2">-->
-<!--		<span class="editor__tabs relative display-block">-->
-<!--			<h1 class="font-sourcecodepro">contact.html</h1>-->
-<!--		</span>-->
+    <!--    <form class="editor relative text-left font-sourcecodepro color-frost-blue2">-->
+    <!--		<span class="editor__tabs relative display-block">-->
+    <!--			<h1 class="font-sourcecodepro">contact.html</h1>-->
+    <!--		</span>-->
 
-<!--        <ul class="editor__lines">-->
-<!--            <li>-->
-<!--				<span class="editor__content color-polar-navy3 font-sourcecodepro">-->
-<!--					&lt;<span class="color-polar-navy3">form</span> <span class="color-polar-navy2">class</span>=<span class="nord-string">"contact"</span>&gt;-->
-<!--				</span>-->
-<!--            </li>-->
+    <!--        <ul class="editor__lines">-->
+    <!--            <li>-->
+    <!--				<span class="editor__content color-polar-navy3 font-sourcecodepro">-->
+    <!--					&lt;<span class="color-polar-navy3">form</span> <span class="color-polar-navy2">class</span>=<span class="nord-string">"contact"</span>&gt;-->
+    <!--				</span>-->
+    <!--            </li>-->
 
-<!--            <li>-->
-<!--				<span class="editor__content editor__content&#45;&#45;indent color-polar-navy3 font-sourcecodepro">-->
-<!--					&lt;<span class="color-polar-navy3">label</span> <span class="color-polar-navy2">for</span>=<span class="nord-string">"name"</span>&gt;<span class="form-label color-snow-dk-grey font-sourcecodepro">Full name:</span>&lt;/<span class="color-polar-navy3">label</span>&gt;-->
-<!--				</span>-->
-<!--            </li>-->
+    <!--            <li>-->
+    <!--				<span class="editor__content editor__content&#45;&#45;indent color-polar-navy3 font-sourcecodepro">-->
+    <!--					&lt;<span class="color-polar-navy3">label</span> <span class="color-polar-navy2">for</span>=<span class="nord-string">"name"</span>&gt;<span class="form-label color-snow-dk-grey font-sourcecodepro">Full name:</span>&lt;/<span class="color-polar-navy3">label</span>&gt;-->
+    <!--				</span>-->
+    <!--            </li>-->
 
-<!--            <li>-->
-<!--				<span class="editor__content editor__content&#45;&#45;indent color-polar-navy3 font-sourcecodepro">-->
-<!--					&lt;<span class="color-polar-navy3">input</span> <span class="color-polar-navy2">type</span>=<span class="nord-string">"text"</span> <span class="color-polar-navy2">name</span>=<span class="nord-string">"name"</span> <span class="color-polar-navy2">value</span>=<span class="nord-string">" <input type="text" placeholder="John Doe" class="editor__input-box color-frost-blue2 editor__input-name overflow-hidden font-sourcecodepro"> "</span>/&gt;-->
-<!--				</span>-->
-<!--            </li>-->
+    <!--            <li>-->
+    <!--				<span class="editor__content editor__content&#45;&#45;indent color-polar-navy3 font-sourcecodepro">-->
+    <!--					&lt;<span class="color-polar-navy3">input</span> <span class="color-polar-navy2">type</span>=<span class="nord-string">"text"</span> <span class="color-polar-navy2">name</span>=<span class="nord-string">"name"</span> <span class="color-polar-navy2">value</span>=<span class="nord-string">" <input type="text" placeholder="John Doe" class="editor__input-box color-frost-blue2 editor__input-name overflow-hidden font-sourcecodepro"> "</span>/&gt;-->
+    <!--				</span>-->
+    <!--            </li>-->
 
-<!--            <li>-->
-<!--                <span class="editor__content font-sourcecodepro">&nbsp;</span>-->
-<!--            </li>-->
+    <!--            <li>-->
+    <!--                <span class="editor__content font-sourcecodepro">&nbsp;</span>-->
+    <!--            </li>-->
 
-<!--            <li>-->
-<!--				<span class="editor__content editor__content&#45;&#45;indent color-polar-navy3 font-sourcecodepro">-->
-<!--					&lt;<span class="color-polar-navy3">label</span> <span class="color-polar-navy2">for</span>=<span class="nord-string">"email"</span>&gt;<span class="form-label color-snow-dk-grey font-sourcecodepro">Email Address:</span>&lt;/<span class="color-polar-navy3">label</span>&gt;-->
-<!--				</span>-->
-<!--            </li>-->
+    <!--            <li>-->
+    <!--				<span class="editor__content editor__content&#45;&#45;indent color-polar-navy3 font-sourcecodepro">-->
+    <!--					&lt;<span class="color-polar-navy3">label</span> <span class="color-polar-navy2">for</span>=<span class="nord-string">"email"</span>&gt;<span class="form-label color-snow-dk-grey font-sourcecodepro">Email Address:</span>&lt;/<span class="color-polar-navy3">label</span>&gt;-->
+    <!--				</span>-->
+    <!--            </li>-->
 
-<!--            <li>-->
-<!--				<span class="editor__content editor__content&#45;&#45;indent color-polar-navy3 font-sourcecodepro">-->
-<!--					&lt;<span class="color-polar-navy3">input</span> <span class="color-polar-navy2">type</span>=<span class="nord-string">"text"</span> <span class="color-polar-navy2">name</span>=<span class="nord-string">"email"</span> <span class="color-polar-navy2">value</span>=<span class="nord-string">" <input type="text" placeholder="JDoe@example.com" class="editor__input-box color-frost-blue2 editor__input-name overflow-hidden font-sourcecodepro"> "</span>/&gt;-->
-<!--				</span>-->
-<!--            </li>-->
+    <!--            <li>-->
+    <!--				<span class="editor__content editor__content&#45;&#45;indent color-polar-navy3 font-sourcecodepro">-->
+    <!--					&lt;<span class="color-polar-navy3">input</span> <span class="color-polar-navy2">type</span>=<span class="nord-string">"text"</span> <span class="color-polar-navy2">name</span>=<span class="nord-string">"email"</span> <span class="color-polar-navy2">value</span>=<span class="nord-string">" <input type="text" placeholder="JDoe@example.com" class="editor__input-box color-frost-blue2 editor__input-name overflow-hidden font-sourcecodepro"> "</span>/&gt;-->
+    <!--				</span>-->
+    <!--            </li>-->
 
-<!--            <li>-->
-<!--                <span class="editor__content font-sourcecodepro">&nbsp;</span>-->
-<!--            </li>-->
+    <!--            <li>-->
+    <!--                <span class="editor__content font-sourcecodepro">&nbsp;</span>-->
+    <!--            </li>-->
 
-<!--            <li>-->
-<!--                <span class="editor__content editor__content&#45;&#45;indent nord-comment color-snow-dk-grey font-sourcecodepro">&lt;!&#45;&#45; Your message here &#45;&#45;&gt;</span>-->
-<!--            </li>-->
+    <!--            <li>-->
+    <!--                <span class="editor__content editor__content&#45;&#45;indent nord-comment color-snow-dk-grey font-sourcecodepro">&lt;!&#45;&#45; Your message here &#45;&#45;&gt;</span>-->
+    <!--            </li>-->
 
-<!--            <li>-->
-<!--				<span class="editor__content editor__content&#45;&#45;indent color-polar-navy3 font-sourcecodepro">-->
-<!--					&lt;<span class="color-polar-navy3">textarea</span> <span class="color-polar-navy2">id</span>=<span class="nord-string">"message"</span>&gt;<br>-->
-<!--				<textarea class="editor__input-box color-frost-blue2 editor__textarea overflow-hidden font-sourcecodepro"></textarea>-->
-<!--				</span>-->
-<!--            </li>-->
+    <!--            <li>-->
+    <!--				<span class="editor__content editor__content&#45;&#45;indent color-polar-navy3 font-sourcecodepro">-->
+    <!--					&lt;<span class="color-polar-navy3">textarea</span> <span class="color-polar-navy2">id</span>=<span class="nord-string">"message"</span>&gt;<br>-->
+    <!--				<textarea class="editor__input-box color-frost-blue2 editor__textarea overflow-hidden font-sourcecodepro"></textarea>-->
+    <!--				</span>-->
+    <!--            </li>-->
 
-<!--            <li>-->
-<!--                <span class="editor__content editor__content&#45;&#45;indent color-polar-navy3 font-sourcecodepro">&lt;/<span class="color-polar-navy3">textarea</span>&gt;</span>-->
-<!--            </li>-->
+    <!--            <li>-->
+    <!--                <span class="editor__content editor__content&#45;&#45;indent color-polar-navy3 font-sourcecodepro">&lt;/<span class="color-polar-navy3">textarea</span>&gt;</span>-->
+    <!--            </li>-->
 
-<!--            <li>-->
-<!--                <span class="editor__content font-sourcecodepro">&nbsp;</span>-->
-<!--            </li>-->
+    <!--            <li>-->
+    <!--                <span class="editor__content font-sourcecodepro">&nbsp;</span>-->
+    <!--            </li>-->
 
-<!--            <li>-->
-<!--				<span class="editor__content editor__content&#45;&#45;indent color-polar-navy3 font-sourcecodepro">-->
-<!--					&lt;<span class="color-polar-navy3">input</span> <span class="color-polar-navy2">type</span>=<span class="nord-string">"button"</span> <span class="color-polar-navy2">onclick</span>=<span class="nord-string">"<input class="editor__input-box editor__input-button overflow-hidden font-sourcecodepro color-snow-dk-grey" type="button" value="Submit">"</span>/&gt;-->
-<!--				</span>-->
-<!--            </li>-->
+    <!--            <li>-->
+    <!--				<span class="editor__content editor__content&#45;&#45;indent color-polar-navy3 font-sourcecodepro">-->
+    <!--					&lt;<span class="color-polar-navy3">input</span> <span class="color-polar-navy2">type</span>=<span class="nord-string">"button"</span> <span class="color-polar-navy2">onclick</span>=<span class="nord-string">"<input class="editor__input-box editor__input-button overflow-hidden font-sourcecodepro color-snow-dk-grey" type="button" value="Submit">"</span>/&gt;-->
+    <!--				</span>-->
+    <!--            </li>-->
 
-<!--            <li>-->
-<!--				<span class="editor__content color-polar-navy3 font-sourcecodepro">-->
-<!--					&lt;/<span class="color-polar-navy3">form</span>&gt;-->
-<!--				</span>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--    </form>-->
+    <!--            <li>-->
+    <!--				<span class="editor__content color-polar-navy3 font-sourcecodepro">-->
+    <!--					&lt;/<span class="color-polar-navy3">form</span>&gt;-->
+    <!--				</span>-->
+    <!--            </li>-->
+    <!--        </ul>-->
+    <!--    </form>-->
     <!-- IDE contact form end -->
 </section>
 <!-- contact section end -->
