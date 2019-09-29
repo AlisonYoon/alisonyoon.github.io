@@ -19,3 +19,29 @@ let getApiResponse = (apiUrl) => {
 }
 
 getApiResponse(apiUrl);
+
+const blotterContainer = document.getElementById("blotterContainer");
+let text = new Blotter.Text("Hello", {
+    family : "serif",
+    size : 120,
+    fill : "#171717"
+});
+let material = new Blotter.ChannelSplitMaterial();
+let blotter = new Blotter(material, { texts : text });
+let scope = blotter.forText(text);
+scope.appendTo(blotterContainer);
+
+blotterContainer.addEventListener("mouseenter", function(e){
+    material.uniforms.uOffset.value = 0.3;
+    material.uniforms.uRotation.value = 135;
+    setTimeout(function() {
+        material.uniforms.uOffset.value = 0.05;
+        material.uniforms.uRotation.value = 45;
+    }, 500);
+}, false)
+
+
+
+
+
+
