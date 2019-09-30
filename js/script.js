@@ -20,25 +20,45 @@ let getApiResponse = (apiUrl) => {
 
 getApiResponse(apiUrl);
 
-const blotterContainer = document.getElementById("blotterContainer");
-let text = new Blotter.Text("Hello", {
-    family : "serif",
-    size : 120,
-    fill : "#171717"
-});
-let material = new Blotter.ChannelSplitMaterial();
-let blotter = new Blotter(material, { texts : text });
-let scope = blotter.forText(text);
-scope.appendTo(blotterContainer);
+var text2 = new Blotter.Text("now plays with code", {
+    family: "serif",
+    size: 40,
+    fill: '#eceff4',
+    paddingLeft: 70,
+    paddingRight: 70
+})
 
-blotterContainer.addEventListener("mouseenter", function(e){
-    material.uniforms.uOffset.value = 0.3;
-    material.uniforms.uRotation.value = 135;
-    setTimeout(function() {
-        material.uniforms.uOffset.value = 0.05;
-        material.uniforms.uRotation.value = 45;
-    }, 500);
-}, false)
+var text3 = new Blotter.Text("She used to play with pixels", {
+    family: "serif",
+    size: 30,
+    fill: '#eceff4',
+    paddingLeft: 40,
+    paddingRight: 40
+})
+
+
+var rolling = new Blotter.RollingDistortMaterial(),
+    liquid = new Blotter.LiquidDistortMaterial()
+
+liquid.uniforms.uSpeed.value = 0.5
+liquid.uniforms.uVolatility.value = 0.05
+liquid.uniforms.uSeed.value = 0.05
+
+var brolling = new Blotter(liquid, {
+        texts: text3
+    }),
+    bliquid = new Blotter(rolling, {
+        texts: text2
+    })
+
+var container3 = document.querySelector('.container3'),
+    container4 = document.querySelector('.container4')
+
+var bScopeR = brolling.forText(text3),
+    bScopeL = bliquid.forText(text2)
+
+bScopeR.appendTo(container3)
+bScopeL.appendTo(container4)
 
 
 

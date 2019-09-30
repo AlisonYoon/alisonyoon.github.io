@@ -111,7 +111,7 @@ body {
         width: 18px;
 
         &:before, &:after {
-          background: #D8DEE9;
+          background: #d8dee9;
           content: '';
           display: block;
           height: 100%;
@@ -213,6 +213,10 @@ body {
           margin-top: 5rem;
         }
 
+        &:nth-child(2n) {
+          text-align: right;
+        }
+
         code {
           display: block;
 
@@ -236,6 +240,10 @@ body {
         @media only screen and (min-width: 414px) {
           margin: 10rem 3rem;
         }
+      }
+
+      #testId {
+        margin: 0;
       }
 
       h1 {
@@ -371,11 +379,12 @@ body {
 
 footer {
   justify-content: space-evenly;
+  margin-bottom: 3rem;
 }
 
 /* Shared values - such as color, position, float, overflow, etc */
 nav a, .editor__input-button {
-  color: #ECEFF4;
+  color: #eceff4;
 }
 
 .relative {

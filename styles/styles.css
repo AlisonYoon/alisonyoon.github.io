@@ -112,7 +112,7 @@ body header .menu-icon .navicon {
   width: 18px;
 }
 body header .menu-icon .navicon:before, body header .menu-icon .navicon:after {
-  background: #D8DEE9;
+  background: #d8dee9;
   content: "";
   display: block;
   height: 100%;
@@ -190,6 +190,9 @@ body section.about div {
 body section.about div:first-child {
   margin-top: 5rem;
 }
+body section.about div:nth-child(2n) {
+  text-align: right;
+}
 body section.about div code {
   display: block;
 }
@@ -213,6 +216,9 @@ body section.about div code.language-filter {
   body section.about div {
     margin: 10rem 3rem;
   }
+}
+body section.about #testId {
+  margin: 0;
 }
 body section.about h1 {
   width: 90%;
@@ -319,11 +325,12 @@ body section.portfolio .project-gallery .modal-content img {
 
 footer {
   justify-content: space-evenly;
+  margin-bottom: 3rem;
 }
 
 /* Shared values - such as color, position, float, overflow, etc */
 nav a, .editor__input-button {
-  color: #ECEFF4;
+  color: #eceff4;
 }
 
 .relative {
