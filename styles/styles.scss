@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Lusitana:400,700');
-@import url('https://fonts.googleapis.com/css?family=Tajawal');
+@import url("https://fonts.googleapis.com/css?family=Lusitana:400,700");
+@import url("https://fonts.googleapis.com/css?family=Tajawal");
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css?family=La+Belle+Aurore&display=swap");
 
@@ -29,22 +29,24 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Tajawal', 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Tajawal", "Avenir", Helvetica, Arial, sans-serif;
   text-align: center;
   font-size: 1.8rem;
 
   @media only screen and (min-width: 768px) {
-    border: 8px solid #8FBCBB;
+    border: 8px solid #8fbcbb;
   }
 
-  h1, h2, h3 {
-    font-family: 'Lusitana', serif;
+  h1,
+  h2,
+  h3 {
+    font-family: "Lusitana", serif;
   }
 
   h1 {
     font-weight: 700;
     font-size: 3.8rem;
-    color: #8FBCBB;
+    color: #8fbcbb;
   }
 
   p {
@@ -68,7 +70,7 @@ body {
 
     nav {
       max-height: 0;
-      transition: max-height .2s ease-out;
+      transition: max-height 0.2s ease-out;
       /* Cannot use global width-100 class because of Media Query. Can be fixed later with JS */
       width: 100%;
 
@@ -107,16 +109,17 @@ body {
 
       .navicon {
         height: 2px;
-        transition: background .2s ease-out;
+        transition: background 0.2s ease-out;
         width: 18px;
 
-        &:before, &:after {
+        &:before,
+        &:after {
           background: #d8dee9;
-          content: '';
+          content: "";
           display: block;
           height: 100%;
           position: absolute;
-          transition: all .2s ease-out;
+          transition: all 0.2s ease-out;
           width: 100%;
         }
 
@@ -139,10 +142,9 @@ body {
       }
 
       &:checked ~ .menu-icon {
-
         .navicon {
-
-          &:before, &:after {
+          &:before,
+          &:after {
             top: 0;
           }
 
@@ -178,15 +180,20 @@ body {
     /* greetings area end */
 
     .underlined {
-      color: #EBCB8B;
+      color: #ebcb8b;
       flex: 1;
       font-size: 2rem;
       text-decoration: none;
-      background-image: -webkit-linear-gradient(360deg, #5E81AC 0%, #88C0D0 50%, #A3BE8C 100%);
+      background-image: -webkit-linear-gradient(
+        360deg,
+        #5e81ac 0%,
+        #88c0d0 50%,
+        #a3be8c 100%
+      );
       background-position: 0 1.2em;
       background-size: 0 100%;
       background-repeat: no-repeat;
-      transition: background .5s;
+      transition: background 0.5s;
 
       &:hover {
         background-size: 100% 100%;
@@ -195,7 +202,12 @@ body {
 
     .underlined-gradient {
       background-position: 0 -0.1em;
-      background-image: -webkit-linear-gradient(360deg, #5E81AC 0%, #88C0D0 50%, #A3BE8C 100%);
+      background-image: -webkit-linear-gradient(
+        360deg,
+        #5e81ac 0%,
+        #88c0d0 50%,
+        #a3be8c 100%
+      );
     }
 
     &.about {
@@ -222,13 +234,13 @@ body {
 
           &.language-filter {
             display: inline-block;
-            border: 1px solid #4C566A;
-            border-radius: .4rem;
+            border: 1px solid #4c566a;
+            border-radius: 0.4rem;
             font-size: 1.3rem;
             padding: 0.2rem;
-            margin: 1.5rem 0 .5rem;
-            color: #434C5E;
-            background: #D8DEE9;
+            margin: 1.5rem 0 0.5rem;
+            color: #434c5e;
+            background: #d8dee9;
           }
         }
 
@@ -259,7 +271,6 @@ body {
     /* about end */
 
     &.portfolio {
-
       .project-gallery {
         /*  IE, Lower version Safari fall back {overflow: auto} added above in the Shared values */
 
@@ -287,11 +298,11 @@ body {
           }
 
           &:nth-child(5) {
-            background-image: url('https://placeimg.com/390/300/arch');
+            background-image: url(../images/academyportal.png);
           }
 
           &:nth-child(6) {
-            background-image: url('https://placeimg.com/390/300/arch');
+            background-image: url("https://placeimg.com/390/300/arch");
           }
 
           @media only screen and (min-width: 768px) {
@@ -383,7 +394,8 @@ footer {
 }
 
 /* Shared values - such as color, position, float, overflow, etc */
-nav a, .editor__input-button {
+nav a,
+.editor__input-button {
   color: #eceff4;
 }
 
@@ -416,23 +428,23 @@ nav a, .editor__input-button {
 }
 
 .color-snow-dk-grey {
-  color: #D8DEE9;
+  color: #d8dee9;
 }
 
 .color-polar-navy3 {
-  color: #3B4252;
+  color: #3b4252;
 }
 
 .color-polar-navy2 {
-  color: #434C5E;
+  color: #434c5e;
 }
 
 .color-frost-blue2 {
-  color: #81A1C1;
+  color: #81a1c1;
 }
 
 .bg-snow-dk-grey {
-  background: #D8DEE9;
+  background: #d8dee9;
 }
 
 .width-100 {
@@ -456,5 +468,5 @@ nav a, .editor__input-button {
 }
 
 .font-sourcecodepro {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
 }

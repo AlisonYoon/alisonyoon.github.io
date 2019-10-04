@@ -37,16 +37,18 @@ body {
 }
 @media only screen and (min-width: 768px) {
   body {
-    border: 8px solid #8FBCBB;
+    border: 8px solid #8fbcbb;
   }
 }
-body h1, body h2, body h3 {
+body h1,
+body h2,
+body h3 {
   font-family: "Lusitana", serif;
 }
 body h1 {
   font-weight: 700;
   font-size: 3.8rem;
-  color: #8FBCBB;
+  color: #8fbcbb;
 }
 body p {
   line-height: 150%;
@@ -159,11 +161,11 @@ body section.greetings {
   margin: 0;
 }
 body section .underlined {
-  color: #EBCB8B;
+  color: #ebcb8b;
   flex: 1;
   font-size: 2rem;
   text-decoration: none;
-  background-image: -webkit-linear-gradient(360deg, #5E81AC 0%, #88C0D0 50%, #A3BE8C 100%);
+  background-image: -webkit-linear-gradient(360deg, #5e81ac 0%, #88c0d0 50%, #a3be8c 100%);
   background-position: 0 1.2em;
   background-size: 0 100%;
   background-repeat: no-repeat;
@@ -174,7 +176,7 @@ body section .underlined:hover {
 }
 body section .underlined-gradient {
   background-position: 0 -0.1em;
-  background-image: -webkit-linear-gradient(360deg, #5E81AC 0%, #88C0D0 50%, #A3BE8C 100%);
+  background-image: -webkit-linear-gradient(360deg, #5e81ac 0%, #88c0d0 50%, #a3be8c 100%);
 }
 body section.about {
   -webkit-flex-flow: row wrap;
@@ -198,13 +200,13 @@ body section.about div code {
 }
 body section.about div code.language-filter {
   display: inline-block;
-  border: 1px solid #4C566A;
+  border: 1px solid #4c566a;
   border-radius: 0.4rem;
   font-size: 1.3rem;
   padding: 0.2rem;
   margin: 1.5rem 0 0.5rem;
-  color: #434C5E;
-  background: #D8DEE9;
+  color: #434c5e;
+  background: #d8dee9;
 }
 @media only screen and (min-width: 768px) {
   body section.about div {
@@ -252,7 +254,7 @@ body section.portfolio .project-gallery .project-item:nth-child(4) {
   background-image: url(../images/aptitudetest.png);
 }
 body section.portfolio .project-gallery .project-item:nth-child(5) {
-  background-image: url("https://placeimg.com/390/300/arch");
+  background-image: url(../images/academyportal.png);
 }
 body section.portfolio .project-gallery .project-item:nth-child(6) {
   background-image: url("https://placeimg.com/390/300/arch");
@@ -329,7 +331,8 @@ footer {
 }
 
 /* Shared values - such as color, position, float, overflow, etc */
-nav a, .editor__input-button {
+nav a,
+.editor__input-button {
   color: #eceff4;
 }
 
@@ -362,23 +365,23 @@ nav a, .editor__input-button {
 }
 
 .color-snow-dk-grey {
-  color: #D8DEE9;
+  color: #d8dee9;
 }
 
 .color-polar-navy3 {
-  color: #3B4252;
+  color: #3b4252;
 }
 
 .color-polar-navy2 {
-  color: #434C5E;
+  color: #434c5e;
 }
 
 .color-frost-blue2 {
-  color: #81A1C1;
+  color: #81a1c1;
 }
 
 .bg-snow-dk-grey {
-  background: #D8DEE9;
+  background: #d8dee9;
 }
 
 .width-100 {
