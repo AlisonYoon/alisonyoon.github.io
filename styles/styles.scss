@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Tajawal");
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css?family=La+Belle+Aurore&display=swap");
+@import "mixins";
 
 *,
 *::after,
@@ -278,31 +279,104 @@ body {
           height: 300px;
           /*  IE, Lower version Safari fall back {float:left} added above in the Shared values */
           background-size: cover;
+          background-position: center;
           background-repeat: no-repeat;
           cursor: pointer;
 
           &:nth-child(1) {
             background-image: url(../images/collectorsapp.png);
+
+            &:after {
+              content: "Collector\'s app";
+              @include projectItemBanner;
+            }
+            
+            &:hover {
+
+              &:after {
+                @include contentCenter;
+              }
+            }
           }
 
           &:nth-child(2) {
             background-image: url(../images/dogmaze.png);
+
+            &:after {
+              content: "Dog Maze";
+              @include projectItemBanner;
+            }
+
+            &:hover {
+
+              &:after {
+                @include contentCenter;
+              }
+            }
           }
 
           &:nth-child(3) {
             background-image: url(../images/catapi.png);
+
+            &:after {
+              content: "Cat API";
+              @include projectItemBanner;
+            }
+
+            &:hover {
+
+              &:after {
+                @include contentCenter;
+              }
+            }
           }
 
           &:nth-child(4) {
             background-image: url(../images/aptitudetest.png);
+
+            &:after {
+              content: "Aptitude Test";
+              @include projectItemBanner;
+            }
+
+            &:hover {
+
+              &:after {
+                @include contentCenter;
+              }
+            }
           }
 
           &:nth-child(5) {
             background-image: url(../images/academyportal.png);
+
+            &:after {
+              content: "Academy Portal";
+              @include projectItemBanner;
+            }
+
+            &:hover {
+
+              &:after {
+                @include contentCenter;
+              }
+            }
           }
 
           &:nth-child(6) {
-            background-image: url("https://placeimg.com/390/300/arch");
+            background-image: url(../images/hot-dog.png);
+
+            &:after {
+              content: "Dog Champion App";
+              @include projectItemBanner;
+            }
+
+            &:hover {
+
+              &:after {
+                @include contentCenter;
+              }
+            }
           }
 
           @media only screen and (min-width: 768px) {
@@ -371,7 +445,9 @@ body {
         }
 
         .modal-header .close-modal {
-          font-size: 1.5rem;
+          font-size: 2rem;
+          background: none;
+          border: none;
         }
 
         .modal p + p {

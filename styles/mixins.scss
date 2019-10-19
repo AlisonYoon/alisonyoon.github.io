@@ -1,0 +1,14 @@
+@mixin projectItemBanner {
+  background: rgba(0, 0, 0, .6);
+  width: 100%;
+  height: 100%;
+  display: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+@mixin contentCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
